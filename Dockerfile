@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # Install Yarn locally
-RUN npm install yarn
+RUN npm install -g yarn
 
 # Install dependencies
 RUN yarn install
